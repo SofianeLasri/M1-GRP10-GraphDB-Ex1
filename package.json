@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "run-p type-check \"build-only {@}\" -- & graphql-codegen",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force"
@@ -15,6 +15,9 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/client-preset": "^4.2.2",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@tsconfig/node20": "^20.1.2",
     "@types/node": "^20.11.10",
     "@vitejs/plugin-vue": "^5.0.3",
